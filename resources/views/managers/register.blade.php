@@ -51,17 +51,13 @@ id" autofocus>
  @enderror
  </div>
  </div>
- <div class="form-group row">
+ <div class="form-group"> 
  <label for="sex" class="col-md-4 col-formlabel text-md-right">{{ __('sex') }}</label>
- <div class="col-md-6">
- <input id="sex" type="text" class="formcontrol @error('sex') isinvalid @enderror" name="sex" value="{{ old('sex') }}" required autocomplete
-="sex">
- @error('sex')
- <span class="invalid-feedback" role="alert">
- <strong>{{ $message }}</strong>
- </span>
- @enderror
- </div>
+    <label class="radio-inline">
+    <input type="radio" id="sex" name="sex" value="M">M</label>
+
+    <label class="radio-inline">
+    <input type="radio" id="sex" name="sex" value="F">F</label>
  </div>
  <div class="form-group row">
  <label for="zone" class="col-md-4 col-formlabel text-md-right">{{ __('zone') }}</label>
