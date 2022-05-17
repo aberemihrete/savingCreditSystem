@@ -30,18 +30,16 @@ echo 'some thing wrong try again';
 public function  get_all()
     {
         $managers = managers::all();
-     return view('managers.list', compact('managers'));
+     return view('managers/list', compact('managers'));
     } 
     public function edit($id)
  {
     $managers = managers::find($id);
- return view('managers.edit', compact('managers'));
+ return view('managers/edit', compact('managers'));
  }
  public function update(Request $request)
  {
-  $request->validate([
-    'name' => 'required'
-    ]);
+  $request->validate(['name' => 'required']);
 $managers= managers::find($request->id);
 $managers->Fname=$request->Fname;
 $managers->Lname=$request->Lname;
@@ -50,7 +48,7 @@ $managers->zone=$request->zone;
 $managers->woreda=$request->woreda;
 $managers->address=$request->address;
 $managers->phone=$request->phone;
-$managers>save();
+$managers->save();
     return redirect('managers/list');
     }
     public function delete($id)
@@ -63,6 +61,6 @@ managers::where('id', $id)->delete();
 public function search($id)
     {
         $managers = managers::where('id',$id)->first();
-     return view('managers.search', compact('managers'));
+     return view('managers/search', compact('managers'));
     } 
   }

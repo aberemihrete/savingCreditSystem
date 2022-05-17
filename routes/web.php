@@ -19,8 +19,6 @@ Route::get('/', function () {
 });
 Route::get('/managers/register', [ManagersController::class, 'register'])->name('managers/register');
 Route::post('/managers/register', [ManagersController::class, 'store'])->name('managers/register');
-
-
 Auth::routes();
 Route::get('/home', [App\Http\controllers\HomeControllers ::class, 'index'])->name('home');
 Route::get('/managers/list', [ManagersController::class, 'get_all'])->name('managers/list');
