@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Htttp\Controllers\EmployeeController;
 class Employee extends Model
 {
     use HasFactory;
@@ -16,4 +16,7 @@ class Employee extends Model
         'address',
         'phone'
         ];
+        public function managers(){
+            return $this->belongsTo(Managers::class);
+        }  
 }

@@ -9,7 +9,6 @@ class Managers extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id',
         'Fname',
         'Lname',
         'sex',
@@ -18,5 +17,8 @@ class Managers extends Model
         'address',
         'phone'
         ];
+        public function Employees(){
+            return $this->hasMany(Employee::class);
+        }
        
 }
