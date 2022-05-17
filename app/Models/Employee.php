@@ -13,8 +13,6 @@ class Employee extends Model
         'Fname',
         'Lname',
         'sex',
-        'zone',
-        'woreda',
         'address',
         'phone'
         ];
