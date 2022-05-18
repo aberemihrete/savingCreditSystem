@@ -20,7 +20,12 @@ class CreateEmployeesTable extends Migration
                 $table->string('sex');
                 $table->string('address');
                 $table->integer('phone');
-             $table->unsignedBigInteger('Managers_id')->foreign('Managers_id')->references('id')->on('Managers');
+                $table->unsignedBigInteger('Managers_id');
+                $table->foreign('Managers_id')
+                      ->references('id') 
+                      ->on('Managers') 
+                      ->onDelete('cascade');
+            
              $table->timestamps();
                 });
     }
