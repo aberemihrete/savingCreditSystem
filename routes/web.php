@@ -2,7 +2,6 @@
 use App\Models\mangers;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\ManagersController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
