@@ -18,5 +18,5 @@ class Employee extends Model
         ];
         public function managers(){
             return $this->belongsTo(Managers::class);
-        }  
+      }  
 }
